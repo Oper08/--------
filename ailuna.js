@@ -133,14 +133,19 @@ alert("студентердин орташа мани" + a)
 */
 
 
-let studentCount = parseInt(prompt("Студенттер санын енгізіңіз: "));
-let totalScore  = 0;
-let count = 1;
+function compareWords() {
 
-while (count <= studentCount) {
-    totalScore += parseFloat(prompt(count + "-студенттің бағасын енгізіңіз: "));
-    count++;
+    let word1 = prompt("Биринши соз:");
+    let word2 = prompt("екинши соз:");
+
+    word1 = word1.toLowerCase();
+    word2 = word2.toLowerCase();
+
+    if (word1 === word2) {
+        alert("соз бирдей");
+    } else {
+        alert("создер артурли");
+    }
 }
 
-let averageScore = totalScore / studentCount;
-alert("Орташа баға: " + averageScore.toFixed(2));
+compareWords();
