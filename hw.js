@@ -132,7 +132,7 @@ alert("студентердин орташа мани" + a)
  }
 */
 
-
+/*
 function compareWords() {
 
     let word1 = prompt("Биринши соз:");
@@ -149,3 +149,55 @@ function compareWords() {
 }
 
 compareWords();
+*/
+
+
+
+function bibka() {
+    function isStudent() {
+        const response = prompt("Сиз студентсиз бе ? (ия/жок):");
+        return response.toLowerCase() === "ия" || response.toLowerCase() === "да" || response.toLowerCase() === "yes";
+    }
+
+    function Language() {
+        const language = prompt("кай тилде сойлейсиз? Казакша, орысша, агылшынша (казакша/орысша/агылшынша):").toLowerCase();
+        if (language === "казакша" || language === "казахский" || language === "kazakh") {
+            return "kazakh";
+        } else if (language === "орысша" || language === "русский" || language === "russian") {
+            return "russian";
+        } else if (language === "агылшынша" || language === "английский" || language === "english") {
+            return "english";
+        } else {
+            return null;
+        }
+    }
+
+    function Kazakh() {
+        alert("салем калыныз калай?");
+    }
+
+    function Russian() {
+        alert("Привет! Как дела?");
+    }
+
+    function English() {
+        alert("Hello! How are you?");
+    }
+
+    if (isStudent()) {
+        const language = Language();
+        if (language === "kazakh") {
+            Kazakh();
+        } else if (language === "russian") {
+            Russian();
+        } else if (language === "english") {
+            English();
+        } else {
+            alert("кешириниз мен сизди тусинбедим.");
+        }
+    } else {
+        alert("жаксы кун тилеймин!");
+    }
+}
+
+bibka();
