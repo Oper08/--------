@@ -241,7 +241,7 @@ alert(Барлық соманың евродағы қосындысы: ${euro} E
  
 convert();
 */
-
+/*
 let player = ["Рони","Зидан","Неймар","Бензема"]
 
 console.log(player);
@@ -263,3 +263,20 @@ if (fplayer > 5){
 else if(fplayer < 5 ){
 alert("аз")
 }
+*/
+let sandar = [];
+while (true) {
+    let san = prompt("Сан енгизиниз (0 тоқтату ушин):");
+    if (san == 0) {
+        break;
+    }
+    san = Number(san);
+
+    if (san % 2 === 0) {
+        sandar.unshift(san); 
+    } else {
+        sandar.push(san); 
+    }
+}
+console.log("Массив:", sandar);
+console.log("Длина массива:", sandar.length);
