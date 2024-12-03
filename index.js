@@ -110,5 +110,4 @@ if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
     alert("Ең үлкен және ең кішкентай санның айырмасы: " + difference);
 }
 */
-
-
+alert("менде бари жаксы")
