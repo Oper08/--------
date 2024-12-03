@@ -264,6 +264,7 @@ else if(fplayer < 5 ){
 alert("аз")
 }
 */
+/*
 let sandar = [];
 while (true) {
     let san = prompt("Сан енгизиниз (0 тоқтату ушин):");
@@ -280,3 +281,27 @@ while (true) {
 }
 console.log("Массив:", sandar);
 console.log("Длина массива:", sandar.length);
+*/
+
+
+let player = {
+    name: "Азамат", 
+    surname: "Кайратов", 
+    age: 28, 
+    goals: 45, 
+    teams: ["Жастар", "Ордабасы", "Қайрат"] 
+};
+
+player.goals * 2;
+
+function name1() {
+    return `${player.name} ${player.surname}`;
+}
+
+function name2() {
+    return player.teams[player.teams.length ]; 
+}
+
+console.log("Футболщынын аты жони:", name1 ());
+console.log("Казирги клубы:", name2 ());
+console.log("Жалпы гол саны:", player.goals);
