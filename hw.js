@@ -283,7 +283,7 @@ console.log("Массив:", sandar);
 console.log("Длина массива:", sandar.length);
 */
 
-
+/*
 let player = {
     name: "Азамат", 
     surname: "Кайратов", 
@@ -305,3 +305,16 @@ function name2() {
 console.log("Футболщынын аты жони:", name1 ());
 console.log("Казирги клубы:", name2 ());
 console.log("Жалпы гол саны:", player.goals);
+*/
+const artist = [
+    {name: "Michael Jackson", songs: ["Smooth Criminal", "Billie Jean", "Beat It", "Earth Song"]},
+    {name: "Billie Eilish", songs: ["Bad Guy", "Lovely", "Lunch", "Chihiro"]},
+    {name: "Kairat Nurtas", songs: ["Auymaydy Zhurek", "Ol sen emes"]}
+  ];
+  
+  artist[2].songs[1] = "Baika";
+  
+  console.log("Michael Jackson-нын сонгы ани:", artist[0].songs[artist[0].songs.length - 1]);
+  
+  const shortSongs = artist[1].songs.filter(song => song.length <= 6);
+  console.log("Billie Eilish-тин сонгы ани:", shortSongs);
