@@ -354,3 +354,4 @@ const Class = ["Директор", ...class1, ...class2, "Мугалим"];
 
 console.log(Class);
 
+,
