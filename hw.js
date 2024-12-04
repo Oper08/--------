@@ -306,6 +306,7 @@ console.log("Футболщынын аты жони:", name1 ());
 console.log("Казирги клубы:", name2 ());
 console.log("Жалпы гол саны:", player.goals);
 */
+/*
 const artist = [
     {name: "Michael Jackson", songs: ["Smooth Criminal", "Billie Jean", "Beat It", "Earth Song"]},
     {name: "Billie Eilish", songs: ["Bad Guy", "Lovely", "Lunch", "Chihiro"]},
@@ -318,3 +319,38 @@ const artist = [
   
   const shortSongs = artist[1].songs.filter(song => song.length <= 6);
   console.log("Billie Eilish-тин сонгы ани:", shortSongs);
+  */
+
+
+const students = [
+    { 
+        name: "Айлуна", 
+        baga: 85, 
+        city: "Алматы", 
+        otany: "Казакстан" 
+    },
+    { 
+        name: "Данияр", 
+        baga: 90, 
+        city: "Астана" 
+    }
+];
+
+const [birStudent, ekyStudent] = students;
+
+const { name: studentName, baga: mathscore, city, otany = "Қазақстан" } = birStudent;
+
+console.log("Аты:", studentName);
+console.log("Математика багасы:", mathscore);
+console.log("Кала:", city);
+console.log("Ел:", otany);
+
+
+
+const class1 = ["Назерке", "Ернар", "Динара"];
+const class2 = ["Кундыз", "Анель", "Джони","Бекарыс"];
+
+const Class = ["Директор", ...class1, ...class2, "Мугалим"];
+
+console.log(Class);
+
