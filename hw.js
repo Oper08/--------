@@ -322,36 +322,84 @@ const artist = [
   */
 
 
-const students = [
-    { 
-        name: "Айлуна", 
-        baga: 85, 
-        city: "Алматы", 
-        otany: "Казакстан" 
-    },
-    { 
-        name: "Данияр", 
-        baga: 90, 
-        city: "Астана" 
-    }
-];
+// const students = [
+//     { 
+//         name: "Айлуна", 
+//         baga: 85, 
+//         city: "Алматы", 
+//         otany: "Казакстан" 
+//     },
+//     { 
+//         name: "Данияр", 
+//         baga: 90, 
+//         city: "Астана" 
+//     }
+// ];
 
-const [birStudent, ekyStudent] = students;
+// const [birStudent, ekyStudent] = students;
 
-const { name: studentName, baga: mathscore, city, otany = "Қазақстан" } = birStudent;
+// const { name: studentName, baga: mathscore, city, otany = "Қазақстан" } = birStudent;
 
-console.log("Аты:", studentName);
-console.log("Математика багасы:", mathscore);
-console.log("Кала:", city);
-console.log("Ел:", otany);
+// console.log("Аты:", studentName);
+// console.log("Математика багасы:", mathscore);
+// console.log("Кала:", city);
+// console.log("Ел:", otany);
 
 
 
-const class1 = ["Назерке", "Ернар", "Динара"];
-const class2 = ["Кундыз", "Анель", "Джони","Бекарыс"];
+// const class1 = ["Назерке", "Ернар", "Динара"];
+// const class2 = ["Кундыз", "Анель", "Джони","Бекарыс"];
 
-const Class = ["Директор", ...class1, ...class2, "Мугалим"];
+// const Class = ["Директор", ...class1, ...class2, "Мугалим"];
 
-console.log(Class);
+// console.log(Class);
 
-,
+// ,
+
+
+const data = [
+    {title: '"Абай жолы" - Мұхтар Әуезов',
+    description: 'Абайдың өмірі мен қазақ қоғамының тарихи шежіресі.'},
+    {title: '"Қан мен тер" - Әбдіжәміл Нұрпейісов',
+    description: 'Қазақ халқының қиын кезеңдерінің эпикалық баяны.'},
+    {title: '"Көшпенділер" - Ілияс Есенберлин',
+    description: 'Қазақ хандығының қалыптасу тарихы.'},
+    {title: '"За нами Москва" - Александр Бек',
+    description: 'Панфиловшылардың ержүректігі туралы тарихи деректі роман.'}
+  ];
+  
+
+
+
+const cardsContainer = document.getElementById("cards");
+
+function createCard(item) {
+  // Создаём карточку
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const title = document.createElement("h3");
+  title.textContent = item.title;
+
+  const description = document.createElement("p");
+  description.textContent = item.description;
+
+  const button = document.createElement("button");
+  button.textContent = "Удалить";
+
+  button.addEventListener("click", () => {
+    cardsContainer.removeChild(card);
+  });
+
+  card.appendChild(title);
+  card.appendChild(description);
+  card.appendChild(button);
+
+  return card;
+}
+
+data.forEach(item => {
+  const card = createCard(item);
+  cardsContainer.appendChild(card);
+});
+  
